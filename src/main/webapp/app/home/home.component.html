@@ -1,82 +1,63 @@
-<div class="row">
-  <div class="col-md-3">
-    <span class="hipster img-fluid rounded"></span>
-  </div>
-
-  <div class="col-md-9">
-    <h1 class="display-4"><span jhiTranslate="home.title"></span> R & L GreenTech</h1>
-
-    <p class="lead" jhiTranslate="home.subtitle">Conectando ideias para um futuro sustentável!</p>
-
-    <div>
-      @if (account() !== null) {
-        <div class="alert alert-success">
-          @if (account(); as accountRef) {
-            <span id="home-logged-message" jhiTranslate="home.logged.message" [translateValues]="{ username: accountRef.login }"
-              >Você está logado como &quot;{{ accountRef.login }}&quot;.</span
-            >
-          }
-        </div>
-      } @else {
-        <div class="alert alert-warning">
-          <span jhiTranslate="global.messages.info.authenticated.prefix">Se deseja </span>
-          <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">entrar</a
-          ><span jhiTranslate="global.messages.info.authenticated.suffix"
-            >, utilize as seguintes contas padrões:<br />- Administrador (usuário=&quot;admin&quot; and senha=&quot;admin&quot;) <br />-
-            Usuário (usuário=&quot;user&quot; e senha=&quot;user&quot;).</span
-          >
-        </div>
-
-        <div class="alert alert-warning">
-          <span jhiTranslate="global.messages.info.register.noaccount">Não possui uma conta ainda?</span>&nbsp;
-          <a class="alert-link" routerLink="/account/register" jhiTranslate="global.messages.info.register.link">Crie uma nova conta</a>
-        </div>
-      }
+<!-- 🌍 Seção Principal - Banner Verde -->
+<section id="hero" class="hero-banner text-center text-light py-5" aria-label="Seção principal da página">
+  <section class="hero-banner text-center text-light py-5">
+    <div class="container">
+      <h1 class="fw-bold mb-3">Conecte, Compartilhe e Inove Sustentavelmente</h1>
+      <p class="lead mb-4">
+        Uma plataforma colaborativa entre empresas, universidades e startups, promovendo soluções que geram impacto
+        positivo ao meio ambiente.
+      </p>
+      <button class="btn btn-light btn-lg shadow-sm" routerLink="/register">Participe Agora</button>
     </div>
+  </section>
+</section>
 
-    <p jhiTranslate="home.question">Em caso de dúvida:</p>
+<!-- ♻️ Seção de Objetivos -->
+<section class="objectives-section py-5">
+  <div class="container">
+    <h3 class="text-success fw-bold mb-5 text-center">Nossos Objetivos</h3>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 p-3">
+          <div class="card-body">
+            <h5 class="card-title text-success">🌱 Sustentabilidade</h5>
+            <p class="card-text">
+              Incentivar práticas e projetos que reduzam impactos ambientais e promovam a conscientização ecológica.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 p-3">
+          <div class="card-body">
+            <h5 class="card-title text-success">🤝 Conexão</h5>
+            <p class="card-text">
+              Aproximar empresas, universidades e startups para troca de conhecimento e cooperação tecnológica.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 p-3">
+          <div class="card-body">
+            <h5 class="card-title text-success">💡 Inovação</h5>
+            <p class="card-text">
+              Fomentar o desenvolvimento de novas soluções sustentáveis que atendam às demandas do futuro.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <ul>
-      <li>
-        <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.homepage"
-          >Página principal</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://stackoverflow.com/tags/jhipster/info"
-          target="_blank"
-          rel="noopener noreferrer"
-          jhiTranslate="home.link.stackoverflow"
-          >Stack Overflow</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/jhipster/generator-jhipster/issues?state=open"
-          target="_blank"
-          rel="noopener noreferrer"
-          jhiTranslate="home.link.bugtracker"
-          >Bug tracker</a
-        >
-      </li>
-      <li>
-        <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.chat"
-          >Sala de bate-papo pública R & L GreenTech</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.follow"
-          >siga &#64;R & L no Twitter</a
-        >
-      </li>
-    </ul>
-
-    <p>
-      <span jhiTranslate="home.like">Se você gosta do R & L GreenTech, não se esqueça de avaliar no</span>
-      <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.github"
-        >GitHub</a
-      >!
+<!-- 🌐 Rodapé -->
+<footer class="footer-section text-center border-top py-4 text-muted">.
+  <div class="container">
+    <p class="small mb-0">
+      © 2025 GreenTech — Plataforma colaborativa para sustentabilidade ambiental.
+      <br />
+      Desenvolvido como parte do TCC de Engenharia da Computação | UFBRA.
     </p>
   </div>
-</div>
+</footer>
