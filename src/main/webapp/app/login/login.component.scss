@@ -1,0 +1,86 @@
+/* ======== BACKGROUND DA PÁGINA ======== */
+.auth-page {
+  background: linear-gradient(135deg, #2e7d32, #388e3c, #43a047);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ======== CARD DE LOGIN ======== */
+.auth-card {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  animation: fadeInUp 0.6s ease;
+}
+
+/* ======== LOGO ======== */
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* ======== FORMULÁRIO ======== */
+.form-label {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.form-control {
+  padding: 10px 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.25);
+}
+
+.btn-success {
+  background-color: #2e7d32;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #1b5e20;
+  transform: scale(1.03);
+}
+
+/* ======== LINKS ======== */
+.forgot-password,
+.create-account {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.forgot-password:hover,
+.create-account:hover {
+  text-decoration: underline;
+}
+
+/* ======== ANIMAÇÃO ======== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 576px) {
+  .auth-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+}
