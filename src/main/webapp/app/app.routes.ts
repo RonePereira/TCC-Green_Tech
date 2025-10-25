@@ -4,6 +4,7 @@ import { Authority } from 'app/config/authority.constants';
 
 import { UserRouteAccessService } from 'app/core/auth/user-route-access.service';
 import { errorRoute } from './layouts/error/error.route';
+import homeRoutes from './home/home.route';
 
 const routes: Routes = [
   {
@@ -11,6 +12,12 @@ const routes: Routes = [
     loadComponent: () => import('./home/home.component'),
     title: 'home.title',
   },
+
+  {
+    path: '',
+    children: homeRoutes,
+  },
+  // ... outras rotas, como accountRoutes etc
   {
     path: '',
     loadComponent: () => import('./layouts/navbar/navbar.component'),

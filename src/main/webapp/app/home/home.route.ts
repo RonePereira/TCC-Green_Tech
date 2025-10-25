@@ -1,0 +1,16 @@
+import { Routes } from '@angular/router';
+import HomeComponent from './home.component';
+
+export const homeRoutes: Routes = [
+    {
+        path: '',
+        component: HomeComponent,
+    },
+    {
+        path: 'participe',
+        loadComponent: () => import('./btn-partice-agora/participe-agora.component').then(m => m.ParticipeAgoraComponent),
+    },
+
+];
+
+export default homeRoutes;
